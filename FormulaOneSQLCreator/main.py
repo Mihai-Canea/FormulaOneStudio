@@ -23,7 +23,7 @@ VALUES
 for drivers in data:
     sqlQuery+="("
     for items in drivers:
-        sqlQuery += '`"%s"`,'%(drivers[items])
+        sqlQuery += '"%s",'%(drivers[items])
     sqlQuery+=")\n"
 
 text_file = open("Output/Output.txt", "w")
