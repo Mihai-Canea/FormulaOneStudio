@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FormulaOneStudioWPF.Controls
+namespace FormulaOneStudioWPF.MyUserControls
 {
     /// <summary>
-    /// Logica di interazione per CardDriver.xaml
+    /// Logica di interazione per GridDrivers.xaml
     /// </summary>
-    public partial class CardDriver : UserControl
+    public partial class GridDrivers : UserControl
     {
-        public CardDriver()
+        public GridDrivers()
         {
             InitializeComponent();
         }
