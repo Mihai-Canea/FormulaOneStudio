@@ -17,9 +17,56 @@
         Height="450"
         Width="800">
     <Grid>
-        <materialDesign:Card Padding="32"
-                             Margin="16" Height="80">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
-        </materialDesign:Card>
+        <materialDesign:ColorZone Mode="PrimaryDark"
+                                  Padding="16">
+            <StackPanel Orientation="Horizontal">
+                <!--<ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}" />-->
+                <TextBlock VerticalAlignment="Center"
+                           Margin="16 0 0 0">
+                        Formula One Studio
+                </TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <DockPanel Margin="0">
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+
+                <WrapPanel Orientation="Vertical"
+                           Grid.IsSharedSizeScope="True">
+                    <Image Width="160"
+                           Height="50"></Image>
+                    <Border BorderBrush="#b2b2b2"
+                            BorderThickness="0 0 3 0"
+                            Height="auto"
+                            VerticalAlignment="Top"
+                            Width="160">
+                        <ListBox Width="160"
+                                 FontSize="24"
+                                 x:Name="lstTest"
+                                 IsEnabled="{Binding IsChecked, ElementName=EnableListBox}"
+                                 Height="501"
+                                 Margin="0,0,-2,0">
+                            <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                                    Width="140"
+                                    ToolTip="Resource name: MaterialDesignRaisedButton">
+                                Schedule
+                            </Button>
+                            <TextBlock x:Name="btnAnagrafica"><Run Text="Schedule" /></TextBlock>
+                            <TextBlock x:Name="btnPagella"><Run Text="Standings" /></TextBlock>
+                            <TextBlock x:Name="btnCompiti"><Run Text="Drivers" /></TextBlock>
+                            <TextBlock x:Name="btnRegistro"><Run Text="Teams" /></TextBlock>
+                        </ListBox>
+                    </Border>
+                </WrapPanel>
+            </ScrollViewer>
+            
+            <local:GridDrivers />
+        </DockPanel>
     </Grid>
 </Window>
+
+
+<!--<materialDesign:Card Padding="32"
+                     Margin="16"
+                     Height="80">
+    <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
+</materialDesign:Card>-->
