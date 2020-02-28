@@ -27,11 +27,21 @@ namespace FormulaOneStudio
             callExecuteSqlScript("Countries");
         }
 
+        private void btnCreateTeams_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateDrivers_Click(object sender, EventArgs e)
+        {
+            callExecuteSqlScript("Drivers");
+        }
+
         private void callExecuteSqlScript(string scriptName)
         {
             try
             {
-                
+
                 dbTools.ExecuteSqlScript(scriptName + ".sql");
                 txtOutput.Text = $"Crearte {scriptName} - SUCCESS!";
                 Console.WriteLine("\nCreate " + scriptName + " - SUCCESS\n");
@@ -42,6 +52,7 @@ namespace FormulaOneStudio
                 Console.WriteLine("\nCreate " + scriptName + " - ERROR: " + ex.Message + "\n");
             }
         }
+
 
     }
 }

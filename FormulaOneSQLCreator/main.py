@@ -17,6 +17,8 @@ INSERT INTO [dbo].[Drivers]
     HighestGridPosition,
     DateOfBirth,
     PlaceOfBirth,
+    PathImgSmall,
+    PathImgLarge,
 )
 VALUES
 """
@@ -33,4 +35,5 @@ text_file.close()
 sqlFile= open("C:/Users/"+ getpass.getuser() +"/Documents/MSSQLDatabase/FormulaOne/Drivers.sql", "w")
 sqlFile.write(sqlQuery)
 sqlFile.close()
+
 print(sqlQuery)

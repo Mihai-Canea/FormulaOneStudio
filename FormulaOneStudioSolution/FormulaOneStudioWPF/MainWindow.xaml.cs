@@ -17,7 +17,6 @@ using System.Windows.Shapes;
 // DLL
 using FormulaOneDLL;
 
-
 namespace FormulaOneStudioWPF
 {
     /// <summary>
@@ -25,6 +24,8 @@ namespace FormulaOneStudioWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        DbTools db = new DbTools();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,11 +33,20 @@ namespace FormulaOneStudioWPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
+            db = new DbTools();
+            List<CardDriverDLL> driver = new List<CardDriverDLL>();
+            driver = db.LoadDrivers();
+
+            for (int i = 0; i < driver.Count; i++)
+            {
             MyUserControls.CardDriver card = new MyUserControls.CardDriver();
-            card.CardImage = new BitmapImage(new Uri("https://www.formula1.com/content/fom-website/en/drivers/valtteri-bottas/_jcr_content/image.img.1920.medium.jpg/1554818929157.jpg"));
-            card.DriverName = "Sassarello bello";
-            card.DriverTeam = "Team: Random";
+            card.CardImage = new BitmapImage(new Uri(driver[i].PathImage));
+            card.DriverName = driver[i].Name;
+            card.DriverTeam = driver[i].Team;
             cardTest.Children.Add(card);
+            }
+
         }
     }
 }

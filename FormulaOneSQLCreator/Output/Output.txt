@@ -12,11 +12,13 @@ INSERT INTO [dbo].[Drivers]
     HighestGridPosition,
     DateOfBirth,
     PlaceOfBirth,
+    PathImgSmall,
+    PathImgLarge,
 )
 VALUES
-("Charles Leclerc","Ferrari","Monaco","10","303","42","N/A","1 (x2)","1","16/10/1997","Monte Carlo, Monaco",)
-("Sebastian Vettel","Ferrari","Germany","120","2985","241","4","1 (x53)","1","03/07/1987","Heppenheim, Germany",)
-("Max Verstappen","Red Bull Racing","Netherlands","31","948","102","N/A","1 (x8)","1","30/09/1997","Hasselt, Belgium",)
+("Charles Leclerc","Ferrari","Monaco","10","303","42","N/A","1 (x2)","1","16/10/1997","Monte Carlo, Monaco","https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png","https://www.formula1.com/content/fom-website/en/drivers/charles-leclerc/_jcr_content/image.img.1920.medium.jpg/1567179277948.jpg",)
+("Sebastian Vettel","Ferrari","Germany","120","2985","241","4","1 (x53)","1","03/07/1987","Heppenheim, Germany","https://www.formula1.com/content/dam/fom-website/drivers/S/SEBVET01_Sebastian_Vettel/sebvet01.png.transform/2col/image.png","https://www.formula1.com/content/fom-website/en/drivers/sebastian-vettel/_jcr_content/image.img.1920.medium.jpg/1567175200601.jpg",)
+("Max Verstappen","Red Bull Racing","Netherlands","31","948","102","N/A","1 (x8)","1","30/09/1997","Hasselt, Belgium","https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png","https://www.formula1.com/content/fom-website/en/drivers/max-verstappen/_jcr_content/image.img.1920.medium.jpg/1554819019533.jpg",)
 ("Daniel Ricciardo","Renault","Australia","29","1040","171","N/A","1 (x7)","1","01/07/1989","Perth, Australia",)
 ("Daniil Kvyat","AlphaTauri","Russian Federation","3","170","95","N/A","2 (x1)","4","26/04/1994","Ufa, Russia",)
 ("Lewis Hamilton","Mercedes","United Kingdom","151","3431","250","6","1 (x84)","1","07/01/1985","Stevenage, England",)

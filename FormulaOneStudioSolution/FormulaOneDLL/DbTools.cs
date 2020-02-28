@@ -40,5 +40,40 @@ namespace FormulaOneDLL
             }
             con.Close();
         }
+
+        public List<CardDriverDLL> LoadDrivers()
+        {
+            string WORKINGPATH = $@"C:\Users\{Environment.UserName}\Documents\MSSQLDatabase\FormulaOne\";
+            List<CardDriverDLL> retVal = new List<CardDriverDLL>();
+            var con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + WORKINGPATH + "FormulaOneDB.mdf;Integrated Security=True");
+            using (con)
+            {
+                SqlCommand command = new SqlCommand(
+                  "SELECT * FROM Drivers;",
+                  con);
+                con.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    //Driver t = new Driver(
+                    //    reader.GetInt32(0),
+                    //    reader.GetString(1),
+                    //    null,
+                    //    null,
+                    //    reader.GetString(4)
+                    //);
+                    CardDriverDLL card = new CardDriverDLL(
+                        reader.GetString(12),
+                        reader.GetString(1),
+                        reader.GetString(2)
+                        );
+                    retVal.Add(card);
+                }
+                reader.Close();
+            }
+            return retVal;
+        }
+
     }
 }

@@ -27,7 +27,7 @@
                        Source=""
                        Height="140"
                        Width="200"
-                       Stretch="UniformToFill" />
+                       Stretch="Uniform" />
                 <Button Grid.Row="0"
                         Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                         HorizontalAlignment="Right"

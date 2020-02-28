@@ -30,14 +30,14 @@
         {
             this.btnCreateCountry = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnCreateTeams = new System.Windows.Forms.Button();
             this.btnCreateDrivers = new System.Windows.Forms.Button();
-            this.txtOutput = new System.Windows.Forms.TextBox();
+            this.btnCreateTeams = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnDropDrivers = new System.Windows.Forms.Button();
             this.btnDropTeams = new System.Windows.Forms.Button();
             this.btnDropCountry = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtOutput = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +67,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CREATE";
             // 
+            // btnCreateDrivers
+            // 
+            this.btnCreateDrivers.Location = new System.Drawing.Point(168, 19);
+            this.btnCreateDrivers.Name = "btnCreateDrivers";
+            this.btnCreateDrivers.Size = new System.Drawing.Size(75, 30);
+            this.btnCreateDrivers.TabIndex = 3;
+            this.btnCreateDrivers.Text = "Drivers";
+            this.btnCreateDrivers.UseVisualStyleBackColor = true;
+            this.btnCreateDrivers.Click += new System.EventHandler(this.btnCreateDrivers_Click);
+            // 
+            // btnCreateTeams
+            // 
+            this.btnCreateTeams.Location = new System.Drawing.Point(87, 19);
+            this.btnCreateTeams.Name = "btnCreateTeams";
+            this.btnCreateTeams.Size = new System.Drawing.Size(75, 30);
+            this.btnCreateTeams.TabIndex = 2;
+            this.btnCreateTeams.Text = "Teams";
+            this.btnCreateTeams.UseVisualStyleBackColor = true;
+            this.btnCreateTeams.Click += new System.EventHandler(this.btnCreateTeams_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnDropDrivers);
@@ -80,45 +100,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DROP";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txtOutput);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 251);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(334, 110);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "OUTPUT";
-            // 
-            // btnCreateTeams
-            // 
-            this.btnCreateTeams.Location = new System.Drawing.Point(87, 19);
-            this.btnCreateTeams.Name = "btnCreateTeams";
-            this.btnCreateTeams.Size = new System.Drawing.Size(75, 30);
-            this.btnCreateTeams.TabIndex = 2;
-            this.btnCreateTeams.Text = "Teams";
-            this.btnCreateTeams.UseVisualStyleBackColor = true;
-            // 
-            // btnCreateDrivers
-            // 
-            this.btnCreateDrivers.Location = new System.Drawing.Point(168, 19);
-            this.btnCreateDrivers.Name = "btnCreateDrivers";
-            this.btnCreateDrivers.Size = new System.Drawing.Size(75, 30);
-            this.btnCreateDrivers.TabIndex = 3;
-            this.btnCreateDrivers.Text = "Drivers";
-            this.btnCreateDrivers.UseVisualStyleBackColor = true;
-            // 
-            // txtOutput
-            // 
-            this.txtOutput.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOutput.Location = new System.Drawing.Point(7, 20);
-            this.txtOutput.Multiline = true;
-            this.txtOutput.Name = "txtOutput";
-            this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(321, 78);
-            this.txtOutput.TabIndex = 0;
             // 
             // btnDropDrivers
             // 
@@ -146,6 +127,27 @@
             this.btnDropCountry.TabIndex = 4;
             this.btnDropCountry.Text = "Country";
             this.btnDropCountry.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtOutput);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(0, 251);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(334, 110);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "OUTPUT";
+            // 
+            // txtOutput
+            // 
+            this.txtOutput.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOutput.Location = new System.Drawing.Point(7, 20);
+            this.txtOutput.Multiline = true;
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.ReadOnly = true;
+            this.txtOutput.Size = new System.Drawing.Size(321, 78);
+            this.txtOutput.TabIndex = 0;
             // 
             // Form1
             // 

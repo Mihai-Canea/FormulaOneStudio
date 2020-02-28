@@ -9,7 +9,9 @@
         "HighestRaceFinish": "1 (x2)",
         "HighestGridPosition": "1",
         "DateOfBirth": "16/10/1997",
-        "PlaceOfBirth": "Monte Carlo, Monaco"
+        "PlaceOfBirth": "Monte Carlo, Monaco",
+		"PathImgSmall":"https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png",
+		"PathImgLarge":"https://www.formula1.com/content/fom-website/en/drivers/charles-leclerc/_jcr_content/image.img.1920.medium.jpg/1567179277948.jpg"
     },
     {
         "Name": "Sebastian Vettel",
@@ -22,7 +24,9 @@
         "HighestRaceFinish": "1 (x53)",
         "HighestGridPosition": "1",
         "DateOfBirth": "03/07/1987",
-        "PlaceOfBirth": "Heppenheim, Germany"
+        "PlaceOfBirth": "Heppenheim, Germany",
+		"PathImgSmall":"https://www.formula1.com/content/dam/fom-website/drivers/S/SEBVET01_Sebastian_Vettel/sebvet01.png.transform/2col/image.png",
+		"PathImgLarge":"https://www.formula1.com/content/fom-website/en/drivers/sebastian-vettel/_jcr_content/image.img.1920.medium.jpg/1567175200601.jpg"
     },
     {
         "Name": "Max Verstappen",
@@ -35,7 +39,9 @@
         "HighestRaceFinish": "1 (x8)",
         "HighestGridPosition": "1",
         "DateOfBirth": "30/09/1997",
-        "PlaceOfBirth": "Hasselt, Belgium"
+        "PlaceOfBirth": "Hasselt, Belgium",
+		"PathImgSmall":"https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png",
+		"PathImgLarge":"https://www.formula1.com/content/fom-website/en/drivers/max-verstappen/_jcr_content/image.img.1920.medium.jpg/1554819019533.jpg"
     },
     {
         "Name": "Daniel Ricciardo",
