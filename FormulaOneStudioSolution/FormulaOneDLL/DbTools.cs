@@ -22,7 +22,7 @@ namespace FormulaOneDLL
             fileContent = fileContent.Replace("\t", "");
             var sqlqueries = fileContent.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries);
 
-            var con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + WORKINGPATH + "FormulaOneDB.mdf;Integrated Security=True");
+            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneDB.mdf;Integrated Security=True");
             var cmd = new SqlCommand("query", con);
             con.Open(); int i = 0;
             foreach (var query in sqlqueries)
@@ -45,26 +45,19 @@ namespace FormulaOneDLL
         {
             string WORKINGPATH = $@"C:\Users\{Environment.UserName}\Documents\MSSQLDatabase\FormulaOne\";
             List<CardDriverDLL> retVal = new List<CardDriverDLL>();
-            var con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + WORKINGPATH + "FormulaOneDB.mdf;Integrated Security=True");
+            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneDB.mdf;Integrated Security=True");
             using (con)
             {
                 SqlCommand command = new SqlCommand(
-                  "SELECT * FROM Drivers;",
+                  "SELECT PathImgSmall,Name,Team FROM Drivers ORDER BY Team ASC;",
                   con);
                 con.Open();
 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    //Driver t = new Driver(
-                    //    reader.GetInt32(0),
-                    //    reader.GetString(1),
-                    //    null,
-                    //    null,
-                    //    reader.GetString(4)
-                    //);
                     CardDriverDLL card = new CardDriverDLL(
-                        reader.GetString(12),
+                        reader.GetString(0),
                         reader.GetString(1),
                         reader.GetString(2)
                         );

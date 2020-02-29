@@ -43,13 +43,13 @@ namespace FormulaOneStudio
             {
 
                 dbTools.ExecuteSqlScript(scriptName + ".sql");
-                txtOutput.Text += $">Create {scriptName} - SUCCESS!{Environment.NewLine}";
-                Console.WriteLine("\nCreate " + scriptName + " - SUCCESS\n");
+                txtOutput.Text += $"> {scriptName} - SUCCESS!{Environment.NewLine}";
+                Console.WriteLine("\n" + scriptName + " - SUCCESS\n");
             }
             catch (Exception ex)
             {
-                txtOutput.Text = $"Crearte {scriptName} - ERROR: {ex.Message}";
-                Console.WriteLine("\nCreate " + scriptName + " - ERROR: " + ex.Message + "\n");
+                txtOutput.Text = $"> {scriptName} - ERROR: {ex.Message}";
+                Console.WriteLine("\n " + scriptName + " - ERROR: " + ex.Message + "\n");
             }
         }
 

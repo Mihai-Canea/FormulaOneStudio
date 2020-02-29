@@ -16,7 +16,7 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="600"
-        Width="1000"
+        Width="1100"
         Loaded="Window_Loaded">
     <Grid>
         <materialDesign:ColorZone Mode="PrimaryDark"
@@ -58,11 +58,13 @@
                 </WrapPanel>
             </ScrollViewer>
 
-            <ScrollViewer>
-                <WrapPanel x:Name="cardTest" Margin="0 50 0 0">
-                    
-                </WrapPanel>
-            </ScrollViewer>
+            <Grid  Margin="0 50 0 0">
+                <ScrollViewer>
+                    <WrapPanel x:Name="cardTest">
+
+                    </WrapPanel>
+                </ScrollViewer>
+            </Grid>
         </DockPanel>
     </Grid>
 </Window>
