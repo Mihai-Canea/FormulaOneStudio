@@ -34,7 +34,7 @@ namespace FormulaOneStudio
 
         private void btnCreateDrivers_Click(object sender, EventArgs e)
         {
-            callExecuteSqlScript("Drivers00");
+            callExecuteSqlScript("Drivers");
         }
 
         private void callExecuteSqlScript(string scriptName)
@@ -43,7 +43,7 @@ namespace FormulaOneStudio
             {
 
                 dbTools.ExecuteSqlScript(scriptName + ".sql");
-                txtOutput.Text = $"Create {scriptName} - SUCCESS!";
+                txtOutput.Text += $">Create {scriptName} - SUCCESS!{Environment.NewLine}";
                 Console.WriteLine("\nCreate " + scriptName + " - SUCCESS\n");
             }
             catch (Exception ex)
