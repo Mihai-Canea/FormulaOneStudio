@@ -19,7 +19,7 @@ VALUES
 ('McLaren','McLaren F1 Team','Woking, United Kingdom','Andreas Seidl','James Key','MCL35','Renault','1966','8','1 (x182)','155','155'),
 ('Mercedes','Mercedes-AMG Petronas F1 Team','Brackley, United Kingdom','Toto Wolff','James Allison','W11','Mercedes','1970','6','1 (x93)','103','66'),
 ('AlphaTauri','Scuderia AlphaTauri Honda','Faenza, Italy','Franz Tost','Jody Egginton','AT01','Honda','1985','N/A','1 (x1)','1','1'),
-('Alfa Romeo Racing','Alfa Romeo Racing ORLEN','Hinwil, Switzerland','Frédéric Vasseur','Jan Monchaux','C39','Ferrari','1993','N/A','1 (x1)','1','5'),
-('Red Bull','Aston Martin Red Bull Racing','Milton Keynes, United Kingdom','Christian Horner','Pierre Waché','RB16','Honda','1997','4','1 (x62)','62','65'),
+('Alfa Romeo Racing','Alfa Romeo Racing ORLEN','Hinwil, Switzerland','Frï¿½dï¿½ric Vasseur','Jan Monchaux','C39','Ferrari','1993','N/A','1 (x1)','1','5'),
+('Red Bull','Aston Martin Red Bull Racing','Milton Keynes, United Kingdom','Christian Horner','Pierre Wachï¿½','RB16','Honda','1997','4','1 (x62)','62','65'),
 ('Renault','Renault F1 Team','Enstone, United Kingdom','Cyril Abiteboul','TBC','R.S.20','Renault','1986','2','1 (x20)','20','13'),
 ('Haas','Haas F1 Team','Kannapolis, United States','Guenther Steiner','Rob Taylor','VF-20','Ferrari','2016','N/A','4 (x1)','N/A','2');

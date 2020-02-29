@@ -5,12 +5,12 @@ import json
 
 
 def PrintOutput(sqlQuery, QueryName):
-    text_file = open("Output/Output.txt", "w")
+    """ text_file = open("Output/Output.txt", "w")
     text_file.write(sqlQuery)
-    text_file.close()
+    text_file.close() """
 
     sqlFile = open("C:/Users/" + getpass.getuser() +
-                   "/Documents/MSSQLDatabase/FormulaOne/{}00.sql".format(QueryName), "w")
+                   "/Documents/MSSQLDatabase/FormulaOne/{}.sql".format(QueryName), "w")
     sqlFile.write(sqlQuery)
     sqlFile.close()
 
