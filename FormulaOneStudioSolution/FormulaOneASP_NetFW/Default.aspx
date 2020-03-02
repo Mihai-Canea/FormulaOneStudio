@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FormulaOneASP_NetFW.Default" %>
 
+<%--<%@ Register TagPrefix="My" TagName="userControl" Src="~/MyComponents/CardDriver.ascx" %>--%>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -50,7 +52,7 @@
                             </p>
                             <ul class="menu-list">
                                 <li class="is-right">
-                                    <asp:Button ID="btnDrivers" class="button is-danger is-outlined is-fullwidth" runat="server" Text="Drivers" />
+                                    <asp:Button ID="btnDrivers" class="button is-danger is-outlined is-fullwidth" runat="server" Text="Drivers" OnClick="btnDrivers_Click" />
                                 </li>
                                 <li>
                                     <asp:Button ID="btnTeams" class="button is-danger is-outlined is-fullwidth" runat="server" Text="Teams" />
@@ -79,72 +81,33 @@
                         </aside>
                     </div>
                     <div class="column is-9">
-                        <div class="box">
-                            <section class="container">
-                                <div class="columns features">
-                                    <div class="column is-4 modal-button" data-target="modal-card">
-                                        <div class="card is-shady">
-                                            <div class="card-image ">
-                                                <figure class="image is-5by4">
-                                                    <!-- <figure class="image is-128x128">-->
-                                                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Placeholder image">
-                                                </figure>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="content">
-                                                    <h4>Charles Leclerc</h4>
-                                                    <p>Ferrari</p>
-                                                    <span class="button is-link modal-button">more info....</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+                        <div class="container">
 
-                            <section class="container">
-                                <div class="columns features">
-                                    <div class="column is-4 modal-button" data-target="modal-card">
-                                        <div class="card is-shady">
-                                            <div class="card-image ">
-                                                <figure class="image is-5by4">
-                                                    <!-- <figure class="image is-128x128">-->
-                                                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Placeholder image">
-                                                </figure>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="content">
-                                                    <h4>Charles Leclerc</h4>
-                                                    <p>Ferrari</p>
-                                                    <span class="button is-link modal-button">more info....</span>
+                                <%--<section class="container">
+                                    <div class="columns features">
+                                        <div class="column  modal-button" data-target="modal-card">
+                                            <div class="card is-shady">
+                                                <div class="card-image ">
+                                                    <figure class="image is-5by4">
+                                                        <!-- <figure class="image is-128x128">-->
+                                                        <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Placeholder image">
+                                                    </figure>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="content">
+                                                        <h4>Charles Leclerc</h4>
+                                                        <p>Ferrari</p>
+                                                        <span class="button is-link modal-button">more info....</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </section>
+                                </section>--%>
 
-                            <section class="container">
-                                <div class="columns features">
-                                    <div class="column is-4 modal-button" data-target="modal-card">
-                                        <div class="card is-shady">
-                                            <div class="card-image ">
-                                                <figure class="image is-5by4">
-                                                    <!-- <figure class="image is-128x128">-->
-                                                    <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Placeholder image">
-                                                </figure>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="content">
-                                                    <h4>Charles Leclerc</h4>
-                                                    <p>Ferrari</p>
-                                                    <span class="button is-link modal-button">more info....</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+                                <asp:Panel ID="CardContainer" runat="server" class="columns is-multiline">
+                                </asp:Panel>
+
                         </div>
                         <div class="content is-medium">
                             <h3 class="title is-3">Snippets ¯\_(ツ)_/¯</h3>

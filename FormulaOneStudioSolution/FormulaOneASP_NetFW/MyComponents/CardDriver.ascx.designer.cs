@@ -7,45 +7,36 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace FormulaOneASP_NetFW {
+namespace FormulaOneASP_NetFW.MyComponents {
     
     
-    public partial class Default {
+    public partial class CardDriver {
         
         /// <summary>
-        /// Controllo form1.
+        /// Controllo imgDriver.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Image imgDriver;
         
         /// <summary>
-        /// Controllo btnDrivers.
+        /// Controllo lblNome.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDrivers;
+        protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// Controllo btnTeams.
+        /// Controllo lblTeam.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTeams;
-        
-        /// <summary>
-        /// Controllo CardContainer.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel CardContainer;
+        protected global::System.Web.UI.WebControls.Label lblTeam;
     }
 }

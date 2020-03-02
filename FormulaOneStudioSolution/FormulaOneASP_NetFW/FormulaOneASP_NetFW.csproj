@@ -70,6 +70,7 @@
     <Content Include="CSS\cheatsheet.css" />
     <Content Include="CSS\prism.css" />
     <Content Include="Default.aspx" />
+    <Content Include="MyComponents\CardDriver.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +80,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\CardDriver.ascx.cs">
+      <DependentUpon>CardDriver.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyComponents\CardDriver.ascx.designer.cs">
+      <DependentUpon>CardDriver.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +98,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FormulaOneDLL\FormulaOneDLL.csproj">
+      <Project>{ab94d7e7-35d1-42fb-987a-10459032ccb4}</Project>
+      <Name>FormulaOneDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
