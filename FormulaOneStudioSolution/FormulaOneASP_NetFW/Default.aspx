@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cheatsheet Concept</title>
+    <title>Formula One Studio</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Bulma Version 0.8.x-->
@@ -16,14 +16,12 @@
     <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>
     <link rel='stylesheet' href="CSS/prism.css">
     <link rel="stylesheet" href="CSS/cheatsheet.css">
+    <%--<link rel="stylesheet" href="CSS/cards.css">--%>
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
-
-        <section class="hero is-primary">
+        <section class="hero">
             <div class="hero-body">
                 <div class="columns">
                     <div class="column is-12">
@@ -61,52 +59,21 @@
                             <p class="menu-label">
                                 More to read...
                             </p>
-                            <%--<ul class="menu-list">
-                                <li><span class="tag is-white is-medium">Lorem</span></li>
-                                <li><span class="tag is-white is-medium">Ipsum</span></li>
-                                <li><span class="tag is-white is-medium">Dolor</span></li>
-                                <li><span class="tag is-white is-medium">Animi</span></li>
-                                <li><span class="tag is-white is-medium">Eximi</span></li>
-                                <li><span class="tag is-white is-medium">Nullius</span></li>
-                                <li><span class="tag is-white is-medium">Oxipi</span></li>
-                                <li><span class="tag is-white is-medium">Vultus</span></li>
-                                <li><span class="tag is-white is-medium">Voluptatis</span></li>
-                                <li><span class="tag is-white is-medium">Exomarphis</span></li>
-                                <li><span class="tag is-white is-medium">Finimi</span></li>
-                                <li><span class="tag is-white is-medium">Aenigma</span></li>
-                                <li><span class="tag is-white is-medium">Arkham</span></li>
-                                <li><span class="tag is-white is-medium">Blue</span></li>
-                                <li><span class="tag is-white is-medium">Medium</span></li>
-                            </ul>--%>
+                            <ul class="menu-list">
+                                <li><span class="tag is-white is-medium">2020</span></li>
+                                <li><span class="tag is-white is-medium">2019</span></li>
+                                <li><span class="tag is-white is-medium">2018</span></li>
+                            </ul>
+                            <p class="menu-label">
+                                Dashboard
+                            </p>
                         </aside>
                     </div>
                     <div class="column is-9">
                         <div class="container">
 
-                                <%--<section class="container">
-                                    <div class="columns features">
-                                        <div class="column  modal-button" data-target="modal-card">
-                                            <div class="card is-shady">
-                                                <div class="card-image ">
-                                                    <figure class="image is-5by4">
-                                                        <!-- <figure class="image is-128x128">-->
-                                                        <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Placeholder image">
-                                                    </figure>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="content">
-                                                        <h4>Charles Leclerc</h4>
-                                                        <p>Ferrari</p>
-                                                        <span class="button is-link modal-button">more info....</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>--%>
-
-                                <asp:Panel ID="CardContainer" runat="server" class="columns is-multiline">
-                                </asp:Panel>
+                            <asp:Panel ID="CardContainer" runat="server" class="columns is-multiline">
+                            </asp:Panel>
 
                         </div>
                         <div class="content is-medium">

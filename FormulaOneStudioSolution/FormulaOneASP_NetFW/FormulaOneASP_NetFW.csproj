@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\cards.css" />
     <Content Include="CSS\cheatsheet.css" />
     <Content Include="CSS\prism.css" />
     <Content Include="Default.aspx" />
     <Content Include="MyComponents\CardDriver.ascx" />
+    <Content Include="MyComponents\TableDrivers.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +89,13 @@
     </Compile>
     <Compile Include="MyComponents\CardDriver.ascx.designer.cs">
       <DependentUpon>CardDriver.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\TableDrivers.ascx.cs">
+      <DependentUpon>TableDrivers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyComponents\TableDrivers.ascx.designer.cs">
+      <DependentUpon>TableDrivers.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
