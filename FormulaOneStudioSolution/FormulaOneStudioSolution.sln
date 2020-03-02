@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneStudioWPF", "Form
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneDLL", "FormulaOneDLL\FormulaOneDLL.csproj", "{AB94D7E7-35D1-42FB-987A-10459032CCB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneASP_NetFW", "FormulaOneASP_NetFW\FormulaOneASP_NetFW.csproj", "{FD6A0784-5B26-4B6A-8DB5-96A8A926951B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AB94D7E7-35D1-42FB-987A-10459032CCB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB94D7E7-35D1-42FB-987A-10459032CCB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB94D7E7-35D1-42FB-987A-10459032CCB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6A0784-5B26-4B6A-8DB5-96A8A926951B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6A0784-5B26-4B6A-8DB5-96A8A926951B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6A0784-5B26-4B6A-8DB5-96A8A926951B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6A0784-5B26-4B6A-8DB5-96A8A926951B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
