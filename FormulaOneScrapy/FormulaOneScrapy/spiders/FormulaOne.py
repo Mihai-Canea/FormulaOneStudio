@@ -93,3 +93,34 @@ class Teams(scrapy.Spider):
                 "PolePosition": questions.css("tbody>tr:nth-child(10)>td::text").get(),
                 "FastestLaps": questions.css("tbody>tr:nth-child(11)>td::text").get(),
             }
+
+
+class FixClass(scrapy.Spider):
+    name = "sas"
+    domain = "https://www.formula1.com"
+    start_urls = ["https://www.formula1.com/en/teams.html"]
+
+    def parse(self, response):
+        for questions in response.css("div.container.listing.team-listing > div.row > div"):
+            self.start_urls.append(self.domain + questions.css("a::attr(href)").get())
+
+        self.start_urls.remove(self.start_urls[0])
+        print("----------------------------------\n{}-----------------------\n".format(self.start_urls))
+
+        for questions in response.css("table.stat-list"):
+            # body > div.site-wrapper > main > article > div > header.team-details > section.stats > div > table > tbody > tr:nth-child(1) > td
+            yield{
+                "FullTeamName": questions.css("tbody>tr:nth-child(1)>td::text").get(),
+                "Base": questions.css("tbody>tr:nth-child(2)>td::text").get(),
+                "TeamChief": questions.css("tbody>tr:nth-child(3)>td::text").get(),
+                "TechnicalChief": questions.css("tbody>tr:nth-child(4)>td::text").get(),
+                "Chassis": questions.css("tbody>tr:nth-child(5)>td::text").get(),
+                "PowerUnit": questions.css("tbody>tr:nth-child(6)>td::text").get(),
+                "FirstTeamEntry": questions.css("tbody>tr:nth-child(7)>td::text").get(),
+                "WorldChampionships": questions.css("tbody>tr:nth-child(8)>td::text").get(),
+                "HighestRaceFinish": questions.css("tbody>tr:nth-child(9)>td::text").get(),
+                "PolePosition": questions.css("tbody>tr:nth-child(10)>td::text").get(),
+                "FastestLaps": questions.css("tbody>tr:nth-child(11)>td::text").get(),
+            }
+
+#  div.container.listing.team-listing > div > div:nth-child(1) > a > fieldset > div > div.listing-info > div.name.f1-bold--m > span.f1-color--black
