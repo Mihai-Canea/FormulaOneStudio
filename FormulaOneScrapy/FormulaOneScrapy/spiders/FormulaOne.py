@@ -7,7 +7,7 @@ import scrapy
 
 class Drivers(scrapy.Spider):
     name = "drivers"
-
+    
     start_urls = [
         "https://www.formula1.com/en/drivers/lewis-hamilton.html",
         "https://www.formula1.com/en/drivers/valtteri-bottas.html",
