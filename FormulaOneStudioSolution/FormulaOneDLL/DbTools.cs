@@ -11,7 +11,9 @@ namespace FormulaOneDLL
 {
     public class DbTools
     {
-
+        // ------------------------------------------------------------------
+        // EXECUTE SCRIPT
+        // ------------------------------------------------------------------
         public void ExecuteSqlScript(string sqlScriptName)
         {
             string WORKINGPATH = $@"C:\Users\{Environment.UserName}\Documents\MSSQLDatabase\FormulaOne\";
@@ -23,7 +25,7 @@ namespace FormulaOneDLL
             fileContent = fileContent.Replace("\t", "");
             var sqlqueries = fileContent.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries);
 
-            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneDB.mdf;Integrated Security=True");
+            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneStudioDB.mdf;Integrated Security=True");
             var cmd = new SqlCommand("query", con);
             con.Open(); int i = 0;
             foreach (var query in sqlqueries)
@@ -42,42 +44,76 @@ namespace FormulaOneDLL
             con.Close();
         }
 
-        public List<CardDriverDLL> LoadDrivers()
+        // ------------------------------------------------------------------
+        // DLL
+        // ------------------------------------------------------------------
+        public List<Driver> loadDrivers()
         {
             string WORKINGPATH = $@"C:\Users\{Environment.UserName}\Documents\MSSQLDatabase\FormulaOne\";
-            List<CardDriverDLL> retVal = new List<CardDriverDLL>();
-            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneDB.mdf;Integrated Security=True");
+            List<Driver> retVal = new List<Driver>();
+            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneStudioDB.mdf;Integrated Security=True");
             using (con)
             {
                 SqlCommand command = new SqlCommand(
-                  "SELECT PathImgSmall,Name,Team FROM Drivers ORDER BY Team ASC;",
+                  "SELECT drivers.PathImgSmall, drivers.forename, drivers.surname FROM drivers ORDER BY forename ASC;",
                   con);
                 con.Open();
 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    CardDriverDLL card = new CardDriverDLL(
-                        reader.GetString(0),
-                        reader.GetString(1),
-                        reader.GetString(2)
+                        Driver driver = new Driver(
+                            reader.GetString(0),
+                            reader.GetString(1),
+                            reader.GetString(2)
                         );
-                    retVal.Add(card);
+                        retVal.Add(driver);
                 }
                 reader.Close();
             }
             return retVal;
         }
 
+        public SqlDataReader loadDriversData()
+        {
+            string WORKINGPATH = $@"C:\Users\{Environment.UserName}\Documents\MSSQLDatabase\FormulaOne\";
+            List<Driver> retVal = new List<Driver>();
+            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneStudioDB.mdf;Integrated Security=True");
+            using (con)
+            {
+                SqlCommand command = new SqlCommand(
+                  "SELECT drivers.PathImgSmall, drivers.forename, drivers.surname FROM drivers ORDER BY forename ASC;",
+                  con);
+                con.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                return reader;
+                //while (reader.Read())
+                //{
+                //    Driver driver = new Driver(
+                //        reader.GetString(0),
+                //        reader.GetString(1),
+                //        reader.GetString(2)
+                //    );
+                //    retVal.Add(driver);
+                //}
+                //reader.Close();
+            }
+            //return retVal;
+        }
+
+        // ------------------------------------------------------------------
+        // ASP
+        // ------------------------------------------------------------------
         public DataTable LoadTableDrivers()
         {
             string WORKINGPATH = $@"C:\Users\{Environment.UserName}\Documents\MSSQLDatabase\FormulaOne\";
             DataTable dt = new DataTable();
-            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneDB.mdf;Integrated Security=True");
+            var con = new SqlConnection($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={WORKINGPATH}FormulaOneStudioDB.mdf;Integrated Security=True");
             using (con)
             {
                 SqlCommand command = new SqlCommand(
-                  "SELECT * FROM Drivers ORDER BY Team ASC;",
+                  "SELECT * FROM drivers ORDER BY forename ASC;",
                   con);
                 con.Open();
 

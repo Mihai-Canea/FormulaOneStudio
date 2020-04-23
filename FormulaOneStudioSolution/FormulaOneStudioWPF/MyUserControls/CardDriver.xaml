@@ -24,7 +24,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Image x:Name="imgCard"
-                       Source=""
+                       Source="http://image.png"
                        Height="140"
                        Width="200"
                        Stretch="Uniform" />
