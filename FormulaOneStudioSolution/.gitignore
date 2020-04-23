@@ -31,5 +31,5 @@ bld/
 #wwwroot/
 
 # SQL Server files
-# *.mdf
-# *.ldf
+*.mdf
+*.ldf
