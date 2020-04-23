@@ -24,7 +24,7 @@ The Software is written mainly in **C# WPF Project**, with the addition of some 
 First, clone the repository or download the latest zip.
 
 ```
-git clone https://github.com/vallauri-ict/formula-1-Mihai-Canea.git
+https://github.com/Mihai-Canea/FormulaOneStudio.git
 ````
 ### Build using IDE
 * [Visual Studio Community](https://visualstudio.microsoft.com/it/vs/community/) 2019 for ```Windows``` builds.
