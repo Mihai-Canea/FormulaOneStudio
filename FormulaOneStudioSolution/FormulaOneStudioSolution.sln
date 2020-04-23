@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneStudio", "Formula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneStudioWPF", "FormulaOneStudioWPF\FormulaOneStudioWPF.csproj", "{E07A9158-DE3A-484B-9455-C34CA5C73EBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneAPI", "FormulaOneAPI\FormulaOneAPI\FormulaOneAPI.csproj", "{416E5AFD-6B02-42B6-8E32-5E3C576F5365}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOneAPI", "FormulaOneAPI\FormulaOneAPI.csproj", "{416E5AFD-6B02-42B6-8E32-5E3C576F5365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
