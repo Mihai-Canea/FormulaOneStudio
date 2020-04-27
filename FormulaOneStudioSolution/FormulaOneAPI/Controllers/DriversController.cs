@@ -10,12 +10,14 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.UI.WebControls;
 using FormulaOneAPI.Data;
 using FormulaOneAPI.DTOs;
 using FormulaOneAPI.Models;
 
 namespace FormulaOneAPI.Controllers
 {
+    [RoutePrefix("api")]
     public class DriversController : ApiController
     {
         private FormulaOneAPIContext db = new FormulaOneAPIContext();
@@ -23,8 +25,10 @@ namespace FormulaOneAPI.Controllers
         private static readonly Expression<Func<Driver, DriverDto>> AsDriverDto =
             x => new DriverDto
             {
+                driverId = x.driverId,
                 forename = x.forename,
                 surname = x.surname,
+                number = x.number,
                 PathImgSmall = x.PathImgSmall
             };
 
@@ -34,14 +38,13 @@ namespace FormulaOneAPI.Controllers
         //{
         //    return db.Drivers;
         //}
-        [Route("")]
-        public IQueryable<DriverDto> GetBooks()
+        [Route("drivers")]
+        public IQueryable<DriverDto> GetDrivers()
         {
             return db.Drivers.Select(AsDriverDto);
         }
 
 
-        // GET: api/Drivers/5
         //[ResponseType(typeof(Driver))]
         //public async Task<IHttpActionResult> GetDriver(int id)
         //{
@@ -53,44 +56,67 @@ namespace FormulaOneAPI.Controllers
 
         //    return Ok(driver);
         //}
-        // GET api/Books/5
-        [Route("{id:int}")]
+        // GET: api/Drivers/5
+        [Route("drivers/{id:int}")]
         [ResponseType(typeof(DriverDto))]
-        public async Task<IHttpActionResult> GetBook(int id)
+        public async Task<IHttpActionResult> GetDriver(int id)
         {
-            DriverDto book = await db.Drivers
+            DriverDto driver = await db.Drivers
                 .Where(b => b.driverId == id)
                 .Select(AsDriverDto)
                 .FirstOrDefaultAsync();
-            if (book == null)
+            if (driver == null)
             {
                 return NotFound();
             }
 
-            return Ok(book);
+            return Ok(driver);
         }
 
-        [Route("{id:int}/details")]
+        [Route("{year:int}/drivers")]
+        public IQueryable<DriverDto> GetDriversYear(int year)
+        {
+            return (from d in db.Drivers
+                    from race in db.Races
+                    from res in db.Results
+                    from con in db.Constructors
+                    where d.driverId == res.driverId
+                    where race.raceId == res.raceId
+                    where res.constructorId == con.constructorId
+                    where race.year == year
+                    select new DriverDto
+                    {
+                        driverId = d.driverId,
+                        forename = d.forename,
+                        surname = d.surname,
+                        constructor = con.name,
+                        number = d.number,
+                        PathImgSmall = d.PathImgSmall
+                    }).Distinct().OrderBy(b => b.constructor);
+        }
+
+        [Route("drivers/{id:int}/details")]
         [ResponseType(typeof(DriverDetailDto))]
         public async Task<IHttpActionResult> GetDriverDetail(int id)
         {
-            var book = await (from b in db.Drivers
-                              where b.driverId == id
-                              select new DriverDetailDto
-                              {
-                                  forename = b.forename,
-                                  surname = b.surname,
-                                  dob = b.dob,
-                                  nationality = b.nationality,
-                                  url = b.url,
-                                  PathImgSmall = b.PathImgSmall
-                              }).FirstOrDefaultAsync();
+            var driver = await (from d in db.Drivers
+                                where d.driverId == id
+                                select new DriverDetailDto
+                                {
+                                    forename = d.forename,
+                                    surname = d.surname,
+                                    number = d.number,
+                                    dob = d.dob,
+                                    nationality = d.nationality,
+                                    url = d.url,
+                                    PathImgSmall = d.PathImgSmall
+                                }).FirstOrDefaultAsync();
 
-            if (book == null)
+            if (driver == null)
             {
                 return NotFound();
             }
-            return Ok(book);
+            return Ok(driver);
         }
 
         // PUT: api/Drivers/5
