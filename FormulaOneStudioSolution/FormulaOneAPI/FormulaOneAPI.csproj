@@ -101,23 +101,6 @@
     <Content Include="F1_website\js\index.js" />
     <Content Include="F1_website\js\sb-admin-2.js" />
     <Content Include="F1_website\js\sb-admin-2.min.js" />
-    <Content Include="F1_website\vendor\chart.js\Chart.bundle.js" />
-    <Content Include="F1_website\vendor\chart.js\Chart.bundle.min.js" />
-    <Content Include="F1_website\vendor\chart.js\Chart.js" />
-    <Content Include="F1_website\vendor\chart.js\Chart.min.js" />
-    <Content Include="F1_website\vendor\datatables\dataTables.bootstrap4.css" />
-    <Content Include="F1_website\vendor\datatables\dataTables.bootstrap4.js" />
-    <Content Include="F1_website\vendor\datatables\dataTables.bootstrap4.min.css" />
-    <Content Include="F1_website\vendor\datatables\dataTables.bootstrap4.min.js" />
-    <Content Include="F1_website\vendor\datatables\jquery.dataTables.js" />
-    <Content Include="F1_website\vendor\datatables\jquery.dataTables.min.js" />
-    <Content Include="F1_website\vendor\jquery-easing\jquery.easing.compatibility.js" />
-    <Content Include="F1_website\vendor\jquery-easing\jquery.easing.js" />
-    <Content Include="F1_website\vendor\jquery-easing\jquery.easing.min.js" />
-    <Content Include="F1_website\vendor\jquery\jquery.js" />
-    <Content Include="F1_website\vendor\jquery\jquery.min.js" />
-    <Content Include="F1_website\vendor\jquery\jquery.slim.js" />
-    <Content Include="F1_website\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
@@ -171,8 +154,6 @@
     <Content Include="F1_website\scss\_navs.scss" />
     <Content Include="F1_website\scss\_utilities.scss" />
     <Content Include="F1_website\scss\_variables.scss" />
-    <Content Include="F1_website\vendor\jquery\jquery.min.map" />
-    <Content Include="F1_website\vendor\jquery\jquery.slim.min.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
