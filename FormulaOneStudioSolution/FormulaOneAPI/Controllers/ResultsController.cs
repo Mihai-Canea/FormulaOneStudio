@@ -10,10 +10,12 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FormulaOneAPI.Data;
+using FormulaOneAPI.DTOs;
 using FormulaOneAPI.Models;
 
 namespace FormulaOneAPI.Controllers
 {
+    [RoutePrefix("api")]
     public class ResultsController : ApiController
     {
         private FormulaOneAPIContext db = new FormulaOneAPIContext();
@@ -35,6 +37,32 @@ namespace FormulaOneAPI.Controllers
             }
 
             return Ok(result);
+        }
+
+        [Route("{year:int}/results/{round}")]
+        public IQueryable<ResultsDto> GetResultsYear(int year,int round)
+        {
+            return (from d in db.Drivers
+                    from race in db.Races
+                    from res in db.Results
+                    where d.driverId == res.driverId
+                    where race.raceId == res.raceId
+                    where race.year == year
+                    where race.round == round
+                    select new ResultsDto
+                    {
+                        forename = d.forename,
+                        surname = d.surname,
+                        number = res.number,
+                        position = res.position,
+                        positionText = res.positionText,
+                        positionOrder = res.positionOrder,
+                        laps = res.laps,
+                        fastestLapTime = res.fastestLapTime,
+                        fastestLapSpeed = res.fastestLapSpeed,
+                        grid = res.grid,
+                        points = res.points
+                    }).OrderBy(b => b.positionOrder);
         }
 
         // PUT: api/Results/5

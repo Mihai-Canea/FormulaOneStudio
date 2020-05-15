@@ -18,7 +18,7 @@ $(document).ready(function () {
                 $.getJSON(uri)
                     .done((data) => {
                         this.circuits = data;
-                        console.log(data)
+                        //console.log(data)
                     });
             }
         },

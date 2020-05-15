@@ -23,13 +23,16 @@ namespace FormulaOneAPI.Controllers
         private FormulaOneAPIContext db = new FormulaOneAPIContext();
 
         private static readonly Expression<Func<Driver, DriverDto>> AsDriverDto =
-            x => new DriverDto
+            d => new DriverDto
             {
-                driverId = x.driverId,
-                forename = x.forename,
-                surname = x.surname,
-                number = x.number,
-                PathImgSmall = x.PathImgSmall
+                driverId = d.driverId,
+                forename = d.forename,
+                surname = d.surname,
+                dob = d.dob,
+                nationality = d.nationality,
+                number = d.number,
+                url = d.url,
+                PathImgSmall = d.PathImgSmall
             };
 
 
@@ -44,18 +47,6 @@ namespace FormulaOneAPI.Controllers
             return db.Drivers.Select(AsDriverDto);
         }
 
-
-        //[ResponseType(typeof(Driver))]
-        //public async Task<IHttpActionResult> GetDriver(int id)
-        //{
-        //    Driver driver = await db.Drivers.FindAsync(id);
-        //    if (driver == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(driver);
-        //}
         // GET: api/Drivers/5
         [Route("drivers/{id:int}")]
         [ResponseType(typeof(DriverDto))]
@@ -71,6 +62,22 @@ namespace FormulaOneAPI.Controllers
             }
 
             return Ok(driver);
+        }
+
+        [Route("drivers/{id:int}/score")]
+        public double? GetDriversScore(int id)
+        {
+            return db.Results
+                .Where(r => r.driverId == id)
+                .Sum(r => r.points);
+        }
+
+        [Route("drivers/{id:int}/grandprix")]
+        public double? GetDriversGranPrix(int id)
+        {
+            return db.Results
+                .Where(r => r.driverId == id)
+                .Count();
         }
 
         [Route("{year:int}/drivers")]
@@ -90,7 +97,10 @@ namespace FormulaOneAPI.Controllers
                         forename = d.forename,
                         surname = d.surname,
                         constructor = con.name,
+                        dob = d.dob,
+                        nationality = d.nationality,
                         number = d.number,
+                        url = d.url,
                         PathImgSmall = d.PathImgSmall
                     }).Distinct().OrderBy(b => b.constructor);
         }

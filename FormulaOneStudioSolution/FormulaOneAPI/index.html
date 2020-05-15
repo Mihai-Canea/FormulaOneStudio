@@ -11,8 +11,6 @@
 
     <title>F1 Studio</title>
 
-    <!-- Custom fonts for this template-->
-    <!--<link href="F1_website/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
 
-    <!-- Custom styles for this template-->
     <link href="F1_website/css/sb-admin-2.min.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
@@ -40,9 +37,6 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <!-- <div class="sidebar-brand-icon rotate-n-15">
-                  <i class="fas fa-laugh-wink"></i>
-                </div> -->
                 <div class="sidebar-brand-text mx-3">Formula 1</div>
             </a>
 
@@ -59,12 +53,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <!-- <div class="sidebar-heading">
-              Interface
-            </div>
-            -->
             <li class="nav-item">
                 <a class="nav-link" href="F1_website/drivers.html">
                     <!-- <i class="fas fa-fw fa-chart-area"></i> -->
@@ -81,17 +69,19 @@
                     <span>Constructors</span>
                 </a>
             </li>
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <!-- Divider -->
-            <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <!-- Divider -->
-            <!-- Sidebar Toggler (Sidebar) -->
-            <!--<div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>-->
+            <li class="nav-item">
+                <a class="nav-link" href="F1_website/races.html">
+                    <span>Races</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="F1_website/results.html">
+                    <span>Results</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
 
         </ul>
         <!-- End of Sidebar -->
@@ -103,7 +93,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">FormulaOne Studio</a>
+                    <a class="navbar-brand" href="#">FormulaOne Studio | Mihai Canea</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -141,19 +131,21 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Races table</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1.033 elements</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-flag-checkered fa-2x text-gray-500"></i>
+                            <a href="F1_website/races.html">
+                                <div class="card border-left-success shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Races table</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">1.033 elements</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-flag-checkered fa-2x text-gray-500"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -192,41 +184,29 @@
                                 </div>
                             </a>
                         </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <a href="F1_website/results.html">
+                                <div class="card border-left-danger shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Results table</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">2019 ... </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-poll fa-2x text-gray-500"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Content Row -->
                     <!-- Content Row -->
                     <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Project</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Driver controller<span class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Race controller<span class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Circuits controller<span class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="8    0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Contructor controller<span class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
 
                         <div class="col-lg-6 mb-4">
 
@@ -239,21 +219,82 @@
                                     <div class="text-center">
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
                                     </div>
-                                    <p>This is FormulaOneStudio, an Open Source Software that allows you to watch & manage a Formula 1 championship. The Software is written mainly in C# WPF Project, with the addition of some tools written in Python.</p>
+                                    <p>
+                                        This is <strong>FormulaOneStudio</strong>, an Open Source Software that allows you to watch & manage a <strong>Formula 1 championship</strong>. The Software is written mainly in <strong>C# WPF Project</strong>, with the addition of some tools written in <strong>Python</strong>.
+                                    </p>
                                     <a target="_blank" rel="nofollow" href="https://github.com/vallauri-ict/formula-1-Mihai-Canea">See in GitHub &rarr;</a>
                                 </div>
                             </div>
 
-                            <!-- Approach -->
-                            <!--<div class="card shadow mb-4">
+                            <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Project description</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                                    <p>
+                                        There are moments that will remain forever etched in the minds of each of us, chills that will mark our lives forever,
+                                        names that are myths, legends and that will be forever, because the history of a people,
+                                        a nation or even the world whole is written through sport, through overtaking or memorable accidents because a man's
+                                        life can radically change in 120 minutes of racing, because Formula 1 can crown you or even take your life.
+                                        <br /><br />
+                                        It is difficult to tell a story so full of emotions, a story lived at three hundred an hour.
+                                        Certainly one cannot fail to mention some names of legends, drivers who have won a lot, who have won everything and
+                                        others who have disappeared too early whose numbers are not enough to describe their size.
+                                        <br /><br />
+                                        Since dawn, since Formula 1 was a very dangerous event and every corner could be fatal, we must remember Tazio Nuvolari,
+                                        immediately the immortal Enzo Ferrari had glimpsed something in him, something that he would only find in Gilles Villeneuve,
+                                        who he would still have great reserved show if only he had lived a little longer, the list would be very long,
+                                        timeless names like: Mansell, Prost, Fangio, Moss, Ascari, Lauda, ​​Piquet, Stewart or Clark but also pilots who still race
+                                        in Formula 1 as Hamilton or Vettel. Then there are two immortal names, it is not known who is the greatest but both will be
+                                        impressed as well as in the history books, in the mind of each of us: Schumaker and Senna. In fact, to tell a story,
+                                        names are used and then places, those places that represent memory but which are also a launching pad for the future,
+                                        places where champions are crowned, one especially Montecarlo, one of the most popular circuits.
+                                        Insidious of the season but with a panorama of the only port in the world and then there are two tracks
+                                        that count the most races held: Monza and Silverstone.
+                                        <br /><br />
+                                        In addition to the names and places there are the numbers: 7, like the championships won by the greatest
+                                        ever: Schumaker, nobody like him, or 6: the number that Nico Rosberg brought to the car when he was crowned
+                                        world champion in 2016 or 100 podiums conquered by Kimi Raikkonen ... and this list could continue
+                                        indefinitely, infinite, like the fourth point of this story or emotions: the adrenaline,
+                                        the wait, the silence that pervades the body for a moment before the lights go out,
+                                        this is the essence of Formula 1: work, patience, disappointments, but also pride, a checkered flag and victory!
+                                    </p>
                                 </div>
-                            </div>-->
+                            </div>
+
+                        </div>
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Project</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Driver controller<span class="float-right">100%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Race controller<span class="float-right">75%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Circuits controller<span class="float-right">80%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Contructor controller<span class="float-right">75%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Results controller<span class="float-right">90%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -261,15 +302,13 @@
                 </div>
                 <!-- /.container-fluid -->
                 <!-- Content Row -->
-                <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>No Copyright &copy; School project</span>
+                        <span>Mihai Canea &copy; School project</span>
                     </div>
                 </div>
             </footer>
@@ -305,8 +344,12 @@
         </div>
     </div>
 
-    <!-- Libraries -->
-    <script src="js/sb-admin-2.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="F1_website/vendor/jquery/jquery.min.js"></script>
+    <script src="F1_website/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="F1_website/js/sb-admin-2.min.js"></script>
+    <script src="F1_website/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="F1_website/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 </body>
 

@@ -10,6 +10,10 @@ $(document).ready(function () {
             return {
                 drivers: [],
                 driversTable: [],
+                driverDetail: [],
+                pos: 0,
+                totalScore: 0,
+                grandPrix: 0,
             }
         },
         methods: {
@@ -23,6 +27,20 @@ $(document).ready(function () {
                         //console.log("Drivers", myData)
                         this.drivers = data;
                         //console.log(this.drivers)
+                    });
+            },
+            ShowDriverScore: function (driverId) {
+                var uri = `../api/drivers/${driverId}/score`;
+                $.getJSON(uri)
+                    .done((data) => {
+                        this.totalScore = data;
+                    });
+            },
+            ShowDriverGrandPrix: function (driverId) {
+                var uri = `../api/drivers/${driverId}/grandprix`;
+                $.getJSON(uri)
+                    .done((data) => {
+                        this.grandPrix = data;
                     });
             }
         },

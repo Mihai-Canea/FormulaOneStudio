@@ -1,21 +1,10 @@
-### FormulaOne WebAPI Website
-<p align="center">
-  <img src="https://github.com/Mihai-Canea/FormulaOneStudio/blob/master/Assets/image/FormulaOneAPIDash.png" width="100%">
-</p>
+# FormulaOne WebAPI Website
+![Dashboard](../image/FormulaOneAPIDash.png)
+![Drivers](../image/drivers.gif)
+![Circuits](../image/FormulaOneAPICircuits.png)
+![Constructors](../image/FormulaOneAPIConstructors.png)
+![Races](../image/races.gif)
+![Results](../image/FormulaOneAPIResults.png)
 
-<p align="center">
-  <img src="https://github.com/Mihai-Canea/FormulaOneStudio/blob/master/Assets/image/FormulaOneAPIDrivers.png" width="100%">
-</p>
-
-<p align="center">
-  <img src="https://github.com/Mihai-Canea/FormulaOneStudio/blob/master/Assets/image/FormulaOneAPIConstructors.png" width="100%">
-</p>
-
-<p align="center">
-  <img src="https://github.com/Mihai-Canea/FormulaOneStudio/blob/master/Assets/image/FormulaOneAPICircuits.png" width="100%">
-</p>
-
-### FormulaOne WPF
-<p align="center">
-  <img src="https://github.com/Mihai-Canea/FormulaOneStudio/blob/master/Assets/image/FormulaOneWPF.png" width="100%">
-</p>
+# FormulaOne WPF
+![WPF](../image/FormulaOneWPF.png)

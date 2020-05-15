@@ -14,7 +14,7 @@ namespace FormulaOneAPI.Models
         public int circuitId { get; set; }
         public string name { get; set; }
         public DateTime date { get; set; }
-        public TimeSpan time { get; set; }
+        public TimeSpan? time { get; set; }
         public string url { get; set; }
     }
 }
